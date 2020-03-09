@@ -37,6 +37,24 @@
   margin-bottom: 0.2em;
 }
 
+.variant__download-types {
+  display: inline-block;
+  list-style: none;
+}
+
+.variant__download-types li {
+  display: inline-block;
+}
+
+.variant__download-types li {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.variant__download-types li a {
+  line-height: 1;
+}
+
 .variant p {
   margin-bottom: 3rem;
   line-height: 1.75;

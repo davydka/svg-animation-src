@@ -2,18 +2,14 @@
 <!DOCTYPE svg>
 <svg
   data-animation-duration="15s"
-  preserveAspectRatio="xMidYMid meet"
-  version="1.1"
   viewBox="-50 -50 100 100"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns="http://www.w3.org/2000/svg"
 >
   <title>
     ANIMATION 01 - VARIATION A
   </title>
   <desc>
     <p>This is the animation that sparked this entire experiment.</p>
-    <p>Sometime in early 2018, I decided to learn a little about SVG's <code>&lt;animate/&gt;</code> element. However after playing around with it for a while I decided to lean into using CSS animations. From past experience I knew that I could style SVGs using CSS (see the controls of my <a href="http://andrew.wang-hoyer.com/experiments/chaos-game/" target="_blank" rel="noopener">Chaos Game experiment</a>), but I did not know that you could include full stylesheets inside of SVGs.</p>
+    <p>Sometime in early 2018, I decided to learn a little about SVG's <code>&lt;animate/&gt;</code> element. However after playing around with it for a while I decided to lean into using CSS animations. From past experience I knew that I could style SVGs using CSS (see the controls of my <a href="https://andrew.wang-hoyer.com/experiments/chaos-game/" target="_blank" rel="noopener">Chaos Game experiment</a>), but I did not know that you could include full stylesheets inside of SVGs.</p>
     <p>See this animation in action here: <a href="https://andrew.wang-hoyer.com/experiments/svg-animations/01/a" target="_blank" rel="noopener">https://andrew.wang-hoyer.com/experiments/svg-animations/01/a</a>.</p>
     <p>Generator source code : <a href="https://github.com/ndrwhr/svg-animation-src/tree/master/site/_svgs/generators/animations/01/a.js" target="_blank" rel="noopener">https://github.com/ndrwhr/svg-animation-src/tree/master/site/_svgs/generators/animations/01/a.js</a>.</p>
     <p>All generated files and source code are released under the following license:</p>

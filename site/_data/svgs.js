@@ -82,6 +82,15 @@ const generateCommonData = generatorPath => {
 
   svg.desc(markdownLib.render(descContent.join('\n\n')));
 
+  const minXML = svg.render({
+    namespace: `svg-${id}`,
+    minify: true,
+  });
+
+  const rawXML = svg.render({
+    namespace: `svg-${id}`,
+  });
+
   return {
     id,
     title,
@@ -96,19 +105,16 @@ const generateCommonData = generatorPath => {
     url: `/${dirName}/${fileName}/`,
     svgUrl: `/${dirName}/${fileName}.svg`,
     ogImageUrl: `/assets/og/${id}.jpg`,
-    rawXML: svg.render({
-      namespace: `svg-${id}`,
-    }),
-    minXML: svg.render({
-      namespace: `svg-${id}`,
-      minify: true,
-    }),
+    gifUrl: `/assets/conversions/${id}.gif`,
+    mp4Url: `/assets/conversions/${id}.mp4`,
+    rawXML,
+    minXML,
   };
 };
 
 const getAnimations = () => {
   const list = listGenerators('animations')
-    // .filter(path => path.includes('25/'))
+    // .filter(path => path.includes('48/'))
     .filter(path => /\/\w.js/.test(path))
     .map(generateCommonData)
     .sort((a, b) => a.id.localeCompare(b.id));

@@ -82,5 +82,5 @@ module.exports = () => {
 module.exports.desc = `
 This is the animation that sparked this entire experiment.
 
-Sometime in early 2018, I decided to learn a little about SVG's \`<animate/>\` element. However after playing around with it for a while I decided to lean into using CSS animations. From past experience I knew that I could style SVGs using CSS (see the controls of my [Chaos Game experiment](http://andrew.wang-hoyer.com/experiments/chaos-game/)), but I did not know that you could include full stylesheets inside of SVGs.
+Sometime in early 2018, I decided to learn a little about SVG's \`<animate/>\` element. However after playing around with it for a while I decided to lean into using CSS animations. From past experience I knew that I could style SVGs using CSS (see the controls of my [Chaos Game experiment](https://andrew.wang-hoyer.com/experiments/chaos-game/)), but I did not know that you could include full stylesheets inside of SVGs.
 `;

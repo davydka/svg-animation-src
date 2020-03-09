@@ -198,6 +198,7 @@ class SVGElement extends Element {
       ...children,
     );
     this.root = this;
+    this.attributes = attributes;
 
     this.duration = parseTimeAsMs(this.attributes.dataAnimationDuration);
     this.time = 1;
@@ -221,12 +222,13 @@ class SVGElement extends Element {
     }
   }
 
-  renderStep(stepSize) {
-    if (stepSize && this.time > this.duration) return;
+  renderStep(namespace, stepSize) {
+    // if (stepSize && this.time > this.duration) return;
 
     const result = this.render({
+      namespace,
       disableAnimation: true,
-      rootAnimationDelay: stepSize ? this.duration - this.time : undefined,
+      rootAnimationDelay: stepSize ? this.duration * 2 - this.time : undefined,
     });
 
     if (stepSize) this.time += stepSize;
@@ -275,9 +277,9 @@ class StyleElement extends Element {
   }
 }
 
-class MetaElement extends Element {
-  constructor(tagName, parent, text = '') {
-    super(tagName, parent);
+class TextElement extends Element {
+  constructor(tagName, parent, text = '', attributes) {
+    super(tagName, parent, attributes);
     this.text = text;
   }
 
@@ -289,8 +291,9 @@ class MetaElement extends Element {
 const SPECIAL_CONSTRUCTORS = {
   svg: SVGElement,
   style: StyleElement,
-  title: MetaElement,
-  desc: MetaElement,
+  title: TextElement,
+  desc: TextElement,
+  text: TextElement,
 };
 
 module.exports = ElementFactoryProxy;

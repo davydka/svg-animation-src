@@ -7,8 +7,8 @@ pagination:
 permalink: "{{svg.url}}"
 navLinks:
   'about': '/#about'
-  'source code': 'https://github.com/ndrwhr/svg-animations'
-  'more experiments': 'http://andrew.wang-hoyer.com'
+  'source code': 'https://github.com/ndrwhr/svg-animation-src'
+  'more experiments': 'https://andrew.wang-hoyer.com'
 ---
 {% set breadcrumbs = ([
   {
@@ -59,10 +59,10 @@ navLinks:
 
   <ul class="variant__links">
     <li>
-      <a href="{{svg.sourceUrl}}">Generator source code</a>
+      DOWNLOAD: <a href="{{svg.svgUrl | url}}" download>SVG</a> | <a href="{{svg.gifUrl | url}}" download>GIF</a> | <a href="{{svg.mp4Url | url}}" download>MP4</a>
     </li>
     <li>
-      <a href="{{svg.svgUrl | url}}" download>Download unminified SVG</a>
+      <a href="{{svg.sourceUrl}}">VARIANT SOURCE CODE</a>
     </li>
   </ul>
 
